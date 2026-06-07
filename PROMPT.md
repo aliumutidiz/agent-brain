@@ -1,5 +1,5 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-OBSIDIAN BRAIN SETUP — UNIVERSAL PROMPT
+        OBSIDIAN BRAIN SETUP
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 PHASE 0 — DETECT SITUATION
@@ -119,6 +119,8 @@ Rules:
 - Link related files with [[wikilinks]]
 - Do not add personal commentary,
   only reflect the project as-is
+- Every file must have at least 1 incoming [[wikilink]]
+  from another brain file — no orphan files allowed
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 5 — FILE CONTENTS
@@ -165,11 +167,19 @@ gotchas/[gotcha].md
 → Why it occurs
 → How to prevent / fix it
 → [[wikilinks]] to related files
+→ After creating this file:
+   - Add [[gotcha-name]] to the related
+     component or intermediate node file
+   - If critical, add [[gotcha-name]] to
+     INDEX.md's gotcha list (max 5 entries)
 
 patterns/[pattern].md
 → When to use this pattern
 → Code example (maximum 10-15 lines)
 → [[wikilinks]] to components using this pattern
+→ After creating this file:
+   - Add [[pattern-name]] to the related
+     component or intermediate node file
 
 activeContext.md
 → Write this content:
@@ -196,6 +206,14 @@ Forbidden connections:
   a top-level decision
 ✗ No single file should receive
   more than 10 incoming links
+
+Orphan prevention rule:
+✗ No file may exist without at least
+  1 incoming [[wikilink]] from another brain file
+✓ Every new file created → immediately update
+  its parent node to include a link to it
+✓ New gotcha or pattern → add link in the most
+  relevant component or intermediate node file
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 7 — AGENTS.md
@@ -226,11 +244,20 @@ Before closing every session:
 1. Update changed components in brain/components/
 2. Add new decisions as files in brain/decisions/
 3. Add discovered gotchas in brain/gotchas/
-4. Create brain/logs/YYYY-MM-DD.md with:
+   → After creating a gotcha file:
+     a. Add [[gotcha-name]] link in the most
+        relevant component or intermediate node file
+     b. If critical, add [[gotcha-name]] to
+        INDEX.md's gotcha list (max 5 entries)
+4. Add new patterns in brain/patterns/
+   → After creating a pattern file:
+     a. Add [[pattern-name]] link in every
+        component file that uses this pattern
+5. Create brain/logs/YYYY-MM-DD.md with:
    - Files that were changed
    - Decisions that were made
    - Unfinished work
-5. Update brain/activeContext.md:
+6. Update brain/activeContext.md:
    - Current feature being worked on
    - Next step
    - Last updated: YYYY-MM-DD
@@ -246,6 +273,10 @@ Before closing every session:
 - Maintain [[wikilink]] hierarchy at all times
 - Do not add personal commentary,
   only reflect the project as-is
+- Every new file must immediately receive
+  at least 1 incoming [[wikilink]] from an
+  existing brain file — never leave a file
+  as an orphan (no incoming links)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 8 — FINAL CHECK
