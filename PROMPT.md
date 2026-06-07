@@ -185,6 +185,7 @@ activeContext.md
 → Write this content:
    Status: Idle. No active task assigned.
    Last updated: YYYY-MM-DD
+   Past Logs: (leave empty, logs will be linked here)
 
 logs/
 → Create the folder, leave it empty
@@ -257,6 +258,9 @@ Before closing every session:
    - Files that were changed
    - Decisions that were made
    - Unfinished work
+   → After creating the log file:
+     Add [[YYYY-MM-DD]] to brain/activeContext.md
+     under the "Past Logs" section
 6. Update brain/activeContext.md:
    - Current feature being worked on
    - Next step
