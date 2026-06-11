@@ -50,7 +50,7 @@ While scanning, identify the following:
 → Exported functions and component names
 → Repeating code patterns
 → Configuration decisions (why this library was chosen)
-→ Lines containing TODO, FIXME, HACK, workaround
+→ Lines containing TODO, FIXME, HACK, (or variations like TO-DO) workaround
 → Complex or fragile code blocks
 → Data models and their relationships
 
